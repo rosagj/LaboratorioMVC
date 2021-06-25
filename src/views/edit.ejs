@@ -1,0 +1,32 @@
+<%- include('partials/_header') %>
+<div class = "container">
+    <div class="row">
+        <div class = "col-md-5 offset-md-3">
+            <div class="card">
+                <div class = "card-body">
+                    <form action="/edit/<%= task._id %>" method="POST">
+                        <div class="form-group">
+                            <input type="text" name ="name" placeholder = "Nombre del producto" class = "form-control" value = "<%= task.name%>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name ="mark" placeholder = "Marca del producto" class = "form-control" value = "<%= task.mark%>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name ="price" placeholder = "Ingrese un precio" class = "form-control" value = "<%= task.price%>">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name ="category" placeholder = "Ingrese una categoría" class = "form-control" value = "<%= task.category%>">
+                        </div>
+                        <div class ="form-group">
+                            <textarea name="description" cols="80" class="form-control" placeholder="Inserta una descripción"><%= task.description%></textarea>
+                        </div>
+                        <a href="/" class="btn btn-secondary">Cancelar</a>
+                        <button type = "Update" class = "btn btn-primary">Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>
